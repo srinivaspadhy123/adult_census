@@ -4,7 +4,7 @@ import os
 
 file_name = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 file_path = os.path.join(os.getcwd(),"logs")
-os.makedirs(file_path)
+os.makedirs(file_path,exist_ok=True)
 FILEPATH = os.path.join(file_path,file_name)
 
 logging.basicConfig(
